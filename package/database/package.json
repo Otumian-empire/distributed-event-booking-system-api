@@ -1,0 +1,32 @@
+{
+    "name": "@packages/database",
+    "version": "1.0.0",
+    "description": "Database",
+    "license": "ISC",
+    "author": "",
+    "type": "commonjs",
+    "main": "build/index.js",
+    "types": "build/index.d.js",
+    "scripts": {
+        "build": "rm -rf build && npx tsc",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "ts-node src/index.ts",
+        "typeorm": "typeorm-ts-node-commonjs",
+        "migration:create": "npx typeorm migration:create",
+        "migration:generate": "npx typeorm migration:generate -d ./build/data-source.js",
+        "migration:run": "npx typeorm migration:run -d ./build/data-source.js",
+        "migration:show": "npx typeorm migration:show -d ./build/data-source.js",
+        "migration:undo": "npx typeorm migration:revert -d ./build/data-source.js"
+    },
+    "dependencies": {
+        "pg": "^8.14.1",
+        "reflect-metadata": "^0.2.2",
+        "typeorm": "0.3.25",
+        "@packages/core": "*"
+    },
+    "devDependencies": {
+        "@types/node": "^22.13.10",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.8.2"
+    }
+}
