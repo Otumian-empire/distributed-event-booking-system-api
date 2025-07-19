@@ -1,4 +1,7 @@
-import "dotenv/config";
+/**
+ * For any dependant, read the env via the file path
+ */
+
 import { AppConstants } from "./app-constants";
 
 export const EnvConstants = {
