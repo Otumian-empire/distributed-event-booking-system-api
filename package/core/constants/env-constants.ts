@@ -13,4 +13,5 @@ export const EnvConstants = {
     DATABASE_PASSWORD: process.env.DB_PASSWORD ?? AppConstants.DEFAULT_STRING,
     DATABASE_NAME: process.env.DB_NAME ?? AppConstants.DEFAULT_STRING,
     isDevelopment: () => process.env.NODE_ENV === AppConstants.DEVELOPMENT_ENV,
+    isProduction: () => process.env.NODE_ENV === AppConstants.PRODUCTION_ENV,
 };
