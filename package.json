@@ -1,0 +1,22 @@
+{
+    "name": "distributed-event-booking-system-api",
+    "version": "1.0.0",
+    "description": "A highly available and scalable REST API for managing events and bookings. Leveraging message queues for asynchronous processing of critical operations (like booking confirmations and seat adjustments) to prevent overbooking, improve responsiveness, and handle high concurrency",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "clear && npx tsc"
+    },
+    "keywords": [],
+    "workspaces": [
+        "package/database",
+        "package/core"
+    ],
+    "author": "",
+    "license": "ISC",
+    "type": "commonjs",
+    "devDependencies": {
+        "@types/node": "^24.0.14",
+        "typescript": "^5.8.3"
+    }
+}
