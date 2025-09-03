@@ -11,8 +11,7 @@ export class BookingRequestEntity extends SupportEntity {
     requestedSeats!: number;
 
     @Column({
-        type: "enum",
-        enum: BookingRequestStatus,
+        type: "varchar",
         default: BookingRequestStatus.PENDING,
     })
     status!: BookingRequestStatus;

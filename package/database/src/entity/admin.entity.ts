@@ -16,8 +16,7 @@ export class AdminEntity extends SupportEntity {
     isActive!: boolean;
 
     @Column({
-        type: "enum",
-        enum: AdminRole,
+        type: "varchar",
         default: AdminRole.MODERATOR,
     })
     role!: string;

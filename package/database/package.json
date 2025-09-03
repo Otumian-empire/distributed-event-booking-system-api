@@ -12,11 +12,11 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "ts-node src/index.ts",
         "typeorm": "typeorm-ts-node-commonjs",
-        "migration:create": "npx typeorm migration:create",
-        "migration:generate": "npx typeorm migration:generate -d ./build/data-source.js",
-        "migration:run": "npx typeorm migration:run -d ./build/data-source.js",
-        "migration:show": "npx typeorm migration:show -d ./build/data-source.js",
-        "migration:undo": "npx typeorm migration:revert -d ./build/data-source.js"
+        "migration:create": "npm run build && npx typeorm migration:create",
+        "migration:generate": "npm run build && npx typeorm migration:generate -d ./build/data-source.js",
+        "migration:run": "npm run build && npx typeorm migration:run -d ./build/data-source.js",
+        "migration:show": "npm run build && npx typeorm migration:show -d ./build/data-source.js",
+        "migration:undo": "npm run build && npx typeorm migration:revert -d ./build/data-source.js"
     },
     "dependencies": {
         "pg": "^8.14.1",
