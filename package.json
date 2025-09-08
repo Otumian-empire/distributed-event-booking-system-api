@@ -5,18 +5,28 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "clear && npx tsc"
+        "build": "npx tsc"
     },
     "keywords": [],
     "workspaces": [
         "package/database",
-        "package/core"
+        "package/core",
+        "package/user"
     ],
     "author": "",
     "license": "ISC",
     "type": "commonjs",
     "devDependencies": {
+        "@types/bcryptjs": "^2.4.6",
+        "@types/express": "^5.0.3",
+        "@types/jsonwebtoken": "^9.0.10",
         "@types/node": "^24.0.14",
         "typescript": "^5.8.3"
+    },
+    "dependencies": {
+        "bcryptjs": "^3.0.2",
+        "cors": "^2.8.5",
+        "express": "^5.1.0",
+        "jsonwebtoken": "^9.0.2"
     }
 }
