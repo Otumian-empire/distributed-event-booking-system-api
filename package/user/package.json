@@ -1,0 +1,20 @@
+{
+    "name": "user",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.ts",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "ts-node index.ts",
+        "dev": "nodemon index.ts",
+        "build": "rm -rf build && npx tsc"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "commonjs",
+    "dependencies": {
+        "@packages/core": "^1.0.0",
+        "@packages/database": "^1.0.0"
+    }
+}
