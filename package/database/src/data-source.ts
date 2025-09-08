@@ -1,12 +1,7 @@
-import dotenv from "dotenv";
-import path, { join } from "path";
-
-dotenv.config({
-    path: path.resolve(__dirname, "../../../.env"),
-});
+import "reflect-metadata";
 
 import { EnvConstants } from "@packages/core";
-import "reflect-metadata";
+import { join } from "path";
 import { DataSource } from "typeorm";
 
 export const AppDataSource = new DataSource({

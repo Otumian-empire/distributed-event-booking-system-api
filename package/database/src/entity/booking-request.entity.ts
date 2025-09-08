@@ -14,14 +14,14 @@ export class BookingRequestEntity extends SupportEntity {
         type: "varchar",
         default: BookingRequestStatus.PENDING,
     })
-    status!: BookingRequestStatus;
+    status: BookingRequestStatus;
 
     @Column({ type: "text", default: "" })
     failureReason?: string;
 
     @ManyToOne(() => UserEntity)
-    user!: UserEntity;
+    user: UserEntity;
 
     @ManyToOne(() => EventEntity)
-    event!: EventEntity;
+    event: EventEntity;
 }

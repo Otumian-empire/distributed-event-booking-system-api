@@ -6,11 +6,11 @@ import { UserEntity } from "./user.entity";
 @Entity("bookings")
 export class BookingEntity extends SupportEntity {
     @ManyToOne(() => UserEntity, (user) => user.bookings)
-    user!: UserEntity;
+    user: UserEntity;
 
     @ManyToOne(() => EventEntity, (event) => event.bookings)
-    event!: EventEntity;
+    event: EventEntity;
 
     @Column({ type: "bigint", default: 0 })
-    numberOfSeatsBooked!: number;
+    numberOfSeatsBooked: number;
 }

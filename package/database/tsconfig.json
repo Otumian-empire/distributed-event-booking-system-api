@@ -9,7 +9,8 @@
         "strict": true,
         "skipLibCheck": true,
         "outDir": "build",
-        "allowJs": true
+        "allowJs": true,
+        "strictPropertyInitialization": false,
     },
     "exclude": ["node_modules"]
 }

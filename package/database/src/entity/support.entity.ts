@@ -10,18 +10,18 @@ import {
 
 export default abstract class SupportEntity extends BaseEntity {
     @PrimaryGeneratedColumn()
-    id!: number;
+    id: number;
 
     @Index()
     @Column({ type: "uuid", unique: true })
     @Generated("uuid")
-    uuid!: string;
+    uuid: string;
 
     @CreateDateColumn({ type: "timestamp" })
-    createdDate!: Date;
+    createdDate: Date;
 
     @UpdateDateColumn({ type: "timestamp" })
-    updatedDate!: Date;
+    updatedDate: Date;
 
     constructor(model?: Partial<SupportEntity>) {
         super();

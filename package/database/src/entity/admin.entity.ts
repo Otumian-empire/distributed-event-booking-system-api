@@ -1,26 +1,26 @@
 import { AdminRole } from "@packages/core";
 import { Column, Entity, Index, OneToMany } from "typeorm";
-import SupportEntity from "./support.entity";
 import { EventEntity } from "./event.entity";
+import SupportEntity from "./support.entity";
 
 @Entity("admins")
 export class AdminEntity extends SupportEntity {
     @Index()
-    @Column()
-    email!: string;
+    @Column({ type: "varchar", nullable: false })
+    email: string;
 
-    @Column()
-    password!: string;
+    @Column({ type: "varchar", nullable: false })
+    password: string;
 
-    @Column({ default: false })
-    isActive!: boolean;
+    @Column({ type: "boolean", default: false })
+    isActive: boolean;
 
     @Column({
         type: "varchar",
         default: AdminRole.MODERATOR,
     })
-    role!: string;
+    role: AdminRole;
 
     @OneToMany(() => EventEntity, (events) => events.admin)
-    events!: EventEntity[];
+    events: EventEntity[];
 }
