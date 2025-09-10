@@ -5,24 +5,24 @@ import SupportEntity from "./support.entity";
 @Entity("users")
 export class UserEntity extends SupportEntity {
     @Column()
-    firstName!: string;
+    firstName: string;
 
     @Column()
-    lastName!: string;
+    lastName: string;
 
     @Column({ type: "date" })
-    dateOfBirth!: Date;
+    dateOfBirth: Date;
 
     @Index()
     @Column({ unique: true })
-    email!: string;
+    email: string;
 
     @Column()
-    password!: string;
+    password: string;
 
-    @Column({ default: false })
-    isActive!: boolean;
+    @Column({ default: true })
+    isActive: boolean;
 
     @OneToMany(() => BookingEntity, (booking) => booking.user)
-    bookings!: BookingEntity[];
+    bookings: BookingEntity[];
 }

@@ -1,3 +1,4 @@
+import { AppConstants } from "@packages/core";
 import { NextFunction, Response, Request } from "express";
 
 export async function Register(
@@ -6,9 +7,9 @@ export async function Register(
     next: NextFunction
 ) {
     try {
-        //
+        const { email, password, firstName, lastName, dateOfBirth } = req.body;
         return res
-            .status(200)
+            .status(AppConstants.STATUS_CODES.SUCCESS)
             .json({ message: "User registered successfully" });
     } catch (error) {
         return next(error);
